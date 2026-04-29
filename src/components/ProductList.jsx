@@ -9,18 +9,21 @@ const products = [
 function ProductList({ addToCart, category }) {
 
   const filteredProducts =
-    category === "All"
+    !category || category === "All"
       ? products
-      : products.filter(p => p.category === category);
+      : products.filter(
+          (p) =>
+            p.category.toLowerCase() === category.toLowerCase()
+        );
 
-  if (filteredProducts.length === 0) {
+  if (!filteredProducts || filteredProducts.length === 0) {
     return <p>No products available</p>;
   }
 
   return (
     <div>
-      {filteredProducts.map(product => (
-        <ProductCard 
+      {filteredProducts.map((product) => (
+        <ProductCard
           key={product.id}
           product={product}
           addToCart={addToCart}
