@@ -13,6 +13,10 @@ function ProductList({ addToCart, category }) {
       ? products
       : products.filter(p => p.category === category);
 
+  if (filteredProducts.length === 0) {
+    return <p>No products available</p>;
+  }
+
   return (
     <div>
       {filteredProducts.map(product => (

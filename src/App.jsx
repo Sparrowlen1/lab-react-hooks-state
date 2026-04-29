@@ -29,7 +29,7 @@ function App() {
       />
 
       {/* Category Filter */}
-      <select onChange={(e) => setCategory(e.target.value)}>
+     <select value={category} onChange={(e) => setCategory(e.target.value)}>
         <option value="All">All</option>
         <option value="Dairy">Dairy</option>
         <option value="Produce">Produce</option>
