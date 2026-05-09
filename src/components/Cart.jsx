@@ -13,7 +13,7 @@ const Cart = ({ cart, removeFromCart, darkMode }) => {
         ) : (
           <>
             {cart.map((item, index) => (
-              <div key={index} className="cart-item">
+              <div key={index} className="cart-item" data-testid={`cart-item-${item.id}`}>
                 <span className="cart-item-emoji">{item.emoji}</span>
                 <div className="cart-item-details">
                   <span className="cart-item-name">{item.name}</span>
@@ -22,6 +22,7 @@ const Cart = ({ cart, removeFromCart, darkMode }) => {
                 <button 
                   onClick={() => removeFromCart(index)} 
                   className="remove-item-btn"
+                  data-testid={`remove-item-${item.id}`}
                 >
                   Remove
                 </button>

@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import './ProductList.css';
 
-const products = [
+export const products = [
   { id: 1, name: 'Apple', category: 'Fruits', price: 5.99, emoji: '🍎' },
   { id: 2, name: 'Milk', category: 'Dairy', price: 3.99, emoji: '🥛' },
   { id: 3, name: 'Cheese', category: 'Dairy', price: 5.49, emoji: '🧀' },

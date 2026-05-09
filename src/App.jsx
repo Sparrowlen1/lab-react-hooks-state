@@ -37,6 +37,7 @@ const App = () => {
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="category-select"
+              data-testid="category-filter"
             >
               <option value="all">All Categories</option>
               <option value="Fruits">Fruits</option>
