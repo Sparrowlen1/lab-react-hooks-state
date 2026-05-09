@@ -1,9 +1,12 @@
-function DarkModeToggle({ darkMode, toggleDarkMode }) {
+import React from 'react';
+import './DarkModeToggle.css';
+
+const DarkModeToggle = ({ darkMode, toggleDarkMode }) => {
   return (
-    <button onClick={toggleDarkMode}>
-      {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+    <button onClick={toggleDarkMode} className="dark-mode-toggle">
+      {darkMode ? 'Light Mode' : 'Dark Mode'}
     </button>
   );
-}
+};
 
 export default DarkModeToggle;
