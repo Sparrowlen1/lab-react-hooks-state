@@ -6,7 +6,7 @@ const Cart = ({ cart, removeFromCart, darkMode }) => {
 
   return (
     <div className={`cart ${darkMode ? 'dark-mode-cart' : 'light-mode-cart'}`}>
-      <h2>🛒 Your Cart</h2>
+      <h2>Shopping Cart 🛒</h2>
       <div className="cart-items">
         {cart.length === 0 ? (
           <p className="empty-cart">Your cart is empty. Add some items!</p>

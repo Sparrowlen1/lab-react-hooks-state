@@ -39,9 +39,9 @@ const App = () => {
               className="category-select"
             >
               <option value="all">All Categories</option>
+              <option value="fruits">Fruits</option>
               <option value="dairy">Dairy</option>
               <option value="vegetables">Vegetables</option>
-              <option value="fruits">Fruits</option>
               <option value="bakery">Bakery</option>
               <option value="meat">Meat</option>
             </select>
