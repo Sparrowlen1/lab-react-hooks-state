@@ -4,7 +4,9 @@ import App from './App';
 import { products } from './components/ProductList';
 import './index.css';
 
-// Export products as sampleProducts for testing
+// Make sampleProducts available globally for tests
+window.sampleProducts = products;
+// Also export for module systems
 export const sampleProducts = products;
 
 ReactDOM.createRoot(document.getElementById('root')).render(

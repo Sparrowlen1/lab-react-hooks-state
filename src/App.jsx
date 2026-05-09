@@ -10,11 +10,13 @@ const App = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const addToCart = (item) => {
-    setCart(prevCart => [...prevCart, item]);
+    setCart([...cart, item]);
   };
 
   const removeFromCart = (index) => {
-    setCart(prevCart => prevCart.filter((_, i) => i !== index));
+    const newCart = [...cart];
+    newCart.splice(index, 1);
+    setCart(newCart);
   };
 
   const toggleDarkMode = () => {
