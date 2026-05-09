@@ -4,8 +4,8 @@ import App from './App';
 import { products } from './components/ProductList';
 import './index.css';
 
-// Export products for testing
-export { products as sampleProducts };
+// Export products as sampleProducts for testing
+export const sampleProducts = products;
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

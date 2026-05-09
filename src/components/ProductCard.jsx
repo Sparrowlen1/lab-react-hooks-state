@@ -1,5 +1,4 @@
 import React from 'react';
-import './ProductCard.css';
 
 const ProductCard = ({ product, addToCart, darkMode }) => {
   const handleAddToCart = () => {
@@ -17,7 +16,7 @@ const ProductCard = ({ product, addToCart, darkMode }) => {
         className="add-to-cart-btn"
         data-testid={`product-${product.id}`}
       >
-        Add to Cart 🛒
+        Add to Cart
       </button>
     </div>
   );

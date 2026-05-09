@@ -1,6 +1,5 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import './ProductList.css';
 
 export const products = [
   { id: 1, name: 'Apple', category: 'Fruits', price: 5.99, emoji: '🍎' },
