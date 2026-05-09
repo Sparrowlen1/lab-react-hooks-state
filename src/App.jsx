@@ -13,8 +13,8 @@ const App = () => {
     setCart(prevCart => [...prevCart, item]);
   };
 
-  const removeFromCart = (itemId) => {
-    setCart(prevCart => prevCart.filter((_, index) => index !== itemId));
+  const removeFromCart = (index) => {
+    setCart(prevCart => prevCart.filter((_, i) => i !== index));
   };
 
   const toggleDarkMode = () => {
@@ -39,11 +39,11 @@ const App = () => {
               className="category-select"
             >
               <option value="all">All Categories</option>
-              <option value="fruits">Fruits</option>
-              <option value="dairy">Dairy</option>
-              <option value="vegetables">Vegetables</option>
-              <option value="bakery">Bakery</option>
-              <option value="meat">Meat</option>
+              <option value="Fruits">Fruits</option>
+              <option value="Dairy">Dairy</option>
+              <option value="Vegetables">Vegetables</option>
+              <option value="Bakery">Bakery</option>
+              <option value="Meat">Meat</option>
             </select>
           </div>
           

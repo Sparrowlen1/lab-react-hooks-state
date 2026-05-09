@@ -4,7 +4,7 @@ import './DarkModeToggle.css';
 const DarkModeToggle = ({ darkMode, toggleDarkMode }) => {
   return (
     <button onClick={toggleDarkMode} className="dark-mode-toggle">
-      {darkMode ? 'Light Mode' : 'Dark Mode'}
+      Toggle {darkMode ? 'Light' : 'Dark'} Mode
     </button>
   );
 };

@@ -9,16 +9,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.light-mode {
-  background-color: #ffffff;
-  color: #333333;
-}
-
-.dark-mode {
-  background-color: #1a1a2e;
-  color: #eeeeee;
-}
-
 #root {
   min-height: 100vh;
 }
