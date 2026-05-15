@@ -1,25 +1,24 @@
-import React from 'react';
+import React from 'react'
+import styles from '../styles/ProductCard.module.css'
 
-const ProductCard = ({ product, addToCart, darkMode }) => {
-  const handleAddToCart = () => {
-    addToCart(product);
-  };
-
+const ProductCard = ({ product, addToCart }) => {
   return (
-    <div className={`product-card ${darkMode ? 'dark-mode-card' : 'light-mode-card'}`}>
-      <div className="product-emoji">{product.emoji}</div>
-      <h3 className="product-name">{product.name}</h3>
-      <p className="product-category">{product.category}</p>
-      <p className="product-price">${product.price.toFixed(2)}</p>
-      <button 
-        onClick={handleAddToCart} 
-        className="add-to-cart-btn"
-        data-testid={`product-${product.id}`}
+    <div
+      className={`${styles.card} ${!product.inStock ? styles.outOfStock : ''}`}
+    >
+      <h3>{product.name}</h3>
+      <p>Price: {product.price}</p>
+      <p>Status: {product.inStock ? 'In Stock' : 'Out of Stock'}</p>
+
+      
+      <button
+        data-testid={'product-' + product.id}
+        onClick={() => addToCart(product)}
       >
         Add to Cart
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default ProductCard;
+export default ProductCard
